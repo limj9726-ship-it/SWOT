@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+    background: radial-gradient(circle at top left, #e0f2fe 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f0f9ff 0%, transparent 40%),
+                #f8fafc;
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+    background: radial-gradient(circle at top left, #1e293b 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #0f172a 0%, transparent 40%),
+                #020617;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-lg border border-white/50 dark:border-slate-700/50 shadow-xl;
+  }
+  .glass-button {
+    @apply bg-white/50 dark:bg-slate-800/50 hover:bg-white/80 dark:hover:bg-slate-700/80 backdrop-blur-sm border border-white/40 dark:border-slate-700/40 shadow-sm transition-all duration-300;
+  }
+}
